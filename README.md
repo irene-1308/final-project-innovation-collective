@@ -4,7 +4,7 @@
 
 ### Problem Statement
 
-Loneliness is more prolific in today’s society than ever before. Gen Z, Millenials, and elderley individuals report experiencing high levels of social isolation. Gen Z are said to be the lonliest generation of all-time; 22% of Millennials say they have zero friends; and old age loneliness is the highest it's ever been.  Existing social media platforms lack focus on building lasting and meaningful connections based on mutual interest and locality. 
+Loneliness is more prolific in today’s society than ever before. Gen Z, Millenials, and elderly individuals report experiencing high levels of social isolation. Gen Z is said to be the loneliest generation of all time; 22% of Millennials say they have zero friends, and old age loneliness is the highest it's ever been. Existing social media platforms lack focus on building lasting and meaningful connections based on mutual interest and locality.
 
 ### Solution
 
@@ -28,7 +28,7 @@ Landing page based on LearnWorlds press release guidelines (so Amazon press rele
 
 ### MVP2
 
-- Search functionality for chat groups based on location and/or interests.
+- Search functionality for chat groups based on location and interests.
 
 ### MVP3
 
@@ -40,7 +40,7 @@ Landing page based on LearnWorlds press release guidelines (so Amazon press rele
 
 ### MVP5
 
-- Account based authentication (so signup and login pages) rather than session based authentication.
+- Account-based authentication (so signup and login pages) rather than session-based authentication.
 
 
 ## Supporting Documentation
