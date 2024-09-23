@@ -2,7 +2,7 @@
 
 ### _"Connect Locally, Unite Globally"_
 
-## Project Outline:
+## Project Outline
 
 ### Problem Statement
 
