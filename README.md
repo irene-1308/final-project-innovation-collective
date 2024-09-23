@@ -31,6 +31,7 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
     - Location
     - Age
     - Gender
+    - Bio
     - Interests (should be able to add multiple interests)
   - Database (for storing profiles, group chats, etc.) using a pre-built service like Supabase's Database service. Supabase databases come with their own auto-generated Data APIs, allowing you to easily create, read, update, and delete data in them. More info here.
     - https://supabase.com/docs/guides/database/overview
