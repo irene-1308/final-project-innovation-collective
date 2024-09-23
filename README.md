@@ -1,6 +1,6 @@
 # Gatherly
 
-### _"Connect Locally, Unite Globally"_
+### _“Connect Locally, Unite Globally”_
 
 ## Project Outline
 
@@ -53,7 +53,7 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 ### MVP3
 
 - Profile pictures
-- Profanity filtering for chat messages by using, for example:
+- Profanity filtering for chat messages using, for example:
   - https://www.npmjs.com/package/bad-words
   - https://www.npmjs.com/package/badwords-list
   - https://www.npmjs.com/package/obscenity
