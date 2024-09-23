@@ -13,25 +13,36 @@ So, for me for example, it would create a “Dorchester Crypto” chat group bas
 
 ## MVPs
 
-### MVP1
+### MVP0 (Pre-Launch Landing Page)
 
 Landing page based on LearnWorlds press release guidelines (so Amazon press release). Possibly with an e-mail "are you interested" subscription form to gauge initial interest.
 
+### MVP1
+#### step 1
+ 
+- A profile page (based on session cookies first). 
+
+#### step 2
+
+- And a chat page for chatting in your local groups. 
+- Database (storing session to local cookie link)
+
 ### MVP2
 
-Literally 2 pages - A profile paged (based on session cookies first). And a chat page for chatting in your local groups.
+- Search functionality for groups resulting in drop-down of local group chats
 
 ### MVP3
 
-Add an account creation/login page to link the mvp1 session cookies to an account.
+- Local meetups 
 
 ### MVP4
 
-Direct Messages with other members.
+- Direct Messages with other members.
 
 ### MVP5
 
-Local meetups
+- Add an account creation/login page to link the mvp1 session cookies to an account.
+
 
 ## Supporting Documentation
 
