@@ -40,7 +40,7 @@ Landing page based on LearnWorlds press release guidelines (so Amazon press rele
 
 ### MVP5
 
-- Add an account creation/login page to link the mvp1 session cookies to an account.
+- Account based authentication (so signup and login pages) rather than session based authentication.
 
 
 ## Supporting Documentation
