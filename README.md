@@ -14,7 +14,7 @@ A socially responsible social app that fosters community by helping like-minded 
 
 ### Approach
 
-A mobile-first, responsive design web application.
+A mobile-first, responsive designed web application.
 
 ## MVPs
 
