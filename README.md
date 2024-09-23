@@ -13,6 +13,7 @@ Loneliness is more prolific in today’s society than ever before. Gen Z, Millen
 A socially responsible social app that fosters community by helping like-minded individuals find and connect with others within their locality based on shared interests, hobbies and activities. Our app would be aimed at building communities and life-long friendships, both remotely and in-person.
 
 ### Approach
+
 A mobile-first, responsive design web application.
 
 ## MVPs
@@ -22,6 +23,8 @@ A mobile-first, responsive design web application.
 A landing page based on LearnWorlds press release guidelines (so Amazon press release). Possibly with an "are you interested" e-mail subscription form to gauge initial interest.
 
 ### MVP1
+
+Just two pages to start with. A profile page, and a group chat page.
 
 - #### Step 1
 
