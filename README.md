@@ -22,12 +22,12 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 
 - #### Step 1
 
-  - A profile page (based on session cookies first).
+  - A profile page (based on session authentication initially).
+  - Database (only for storing profiles, group chats, and server-side session authentication cookies initially)
 
 - #### Step 2
 
   - A chat page for chatting in your local groups.
-  - Database (only for storing the server-side session to local cookie links initially)
 
 ### MVP2
 
