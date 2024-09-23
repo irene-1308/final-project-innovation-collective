@@ -24,9 +24,9 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 
 ### MVP1
 
-Just two pages to start with. A profile page, and a group chat page.
+Just two pages to start with. A profile page and a group chat page. And somewhere (a database) to store the profile and chat data.
 
-- #### Step 1
+- #### Step 1 - Profile Page
 
   - A profile page (based on session authentication initially) containing:
     - Profile picture placeholder (use the user's initials as a profile picture to start with)
@@ -44,11 +44,11 @@ Just two pages to start with. A profile page, and a group chat page.
     - https://supabase.com/docs/guides/database/connecting-to-postgres
     - https://supabase.com/docs/guides/api
 
-- #### Step 2
+- #### Step 2 - Group Chat Page
 
   - A chat page for chatting in your local groups... Think of this as a "WhatsApp group chat" for each location and interest combination in the system.
 
-- #### Step 3
+- #### Step 3 - Authentication and Authorisation
 
   - User authentication and authorisation using a pre-built service like Supabase's Auth service (https://supabase.com/docs/guides/auth)
 
