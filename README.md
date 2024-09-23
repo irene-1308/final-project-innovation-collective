@@ -32,11 +32,15 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
     - Age
     - Gender
     - Interests (should be able to add multiple interests)
-  - Database (only for storing profiles, group chats, and server-side session authentication cookies initially)
+  - Database (for storing profiles, group chats, etc.)
 
 - #### Step 2
 
   - A chat page for chatting in your local groups
+
+- #### Step 3
+
+  - User authentication and authorisation using a pre-built service like Supabase's Auth service (https://supabase.com/docs/guides/auth)
 
 ### MVP2
 
@@ -58,13 +62,9 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 
 - Direct Messages with other users
 
-### MVP6
-
-- Account-based authentication (so signup and login pages) rather than session-based authentication
-
 ## Future Features (USPs - Unique Selling Propositions)
 
-These are all still in the ideation or under discussion.
+These are all still in ideation or under discussion.
 
 - Local friend recommendations based on your interests and friendship circle.
 - Interest prioritisation (for better friend recommendations).
