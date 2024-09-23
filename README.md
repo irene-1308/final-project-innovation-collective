@@ -6,7 +6,7 @@
 
 ### Problem Statement
 
-Loneliness is more prolific in today’s society than ever before. Gen Z, Millenials, and elderly individuals report experiencing high levels of social isolation. Gen Z is said to be the loneliest generation of all time; 22% of Millennials say they have zero friends, and old age loneliness is the highest it's ever been. Existing social media platforms lack focus on building lasting and meaningful connections based on mutual interest and locality.
+Loneliness is more prolific in today’s society than ever before. Gen Z, Millenials, and elderly individuals report experiencing high levels of social isolation. Gen Z is said to be the loneliest generation of all time. 22% of Millennials say they have zero friends. And old age loneliness is the highest it's ever been. Existing social media platforms lack focus on building lasting and meaningful connections based on mutual interest and locality.
 
 ### Solution
 
@@ -22,28 +22,56 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 
 - #### Step 1
 
-  - A profile page (based on session authentication initially).
+  - A profile page (based on session authentication initially) containing:
+    - Profile picture placeholder (use the user's initials as a profile picture to start with)
+    - Email address
+    - Name
+    - Surname
+    - Display Name
+    - Location
+    - Age
+    - Gender
+    - Interests (should be able to add multiple interests)
   - Database (only for storing profiles, group chats, and server-side session authentication cookies initially)
 
 - #### Step 2
 
-  - A chat page for chatting in your local groups.
+  - A chat page for chatting in your local groups
 
 ### MVP2
 
-- Search functionality for chat groups based on location and interests.
+- Search functionality for chat groups based on location and interests
 
 ### MVP3
 
-- Local meetups
+- Profile pictures
+- A profanity filter for chat messages, for example:
+  - https://www.npmjs.com/package/bad-words
+  - https://www.npmjs.com/package/badwords-list
+  - https://www.npmjs.com/package/obscenity
 
 ### MVP4
 
-- Direct Messages with other members.
+- Local meetups
 
 ### MVP5
 
-- Account-based authentication (so signup and login pages) rather than session-based authentication.
+- Direct Messages with other users
+
+### MVP6
+
+- Account-based authentication (so signup and login pages) rather than session-based authentication
+
+## Future Features (USPs - Unique Selling Propositions)
+
+These are all still in the ideation or under discussion.
+
+- Local friend recommendations based on your interests and friendship circle.
+- Interest prioritisation (for better friend recommendations).
+- Age filters - only chat with people in your chosen age range.
+- AI-powered chat message verification to avoid threats, hate speech, graphic violence, bullying, etc.
+- AI-powered profile picture verification.
+- AI-powered chat group and direct message moderation.
 
 ## Supporting Documentation
 
