@@ -9,27 +9,26 @@ Loneliness is more prolific in today’s society than ever before. Gen Z, Millen
 ### Solution
 
 A socially responsible social app that fosters community by helping like-minded individuals find and connect with others within their locality based on shared interests, hobbies and activities. Our app would be aimed at building communities and life-long friendships, both remotely and in-person.   
-So, for me for example, it would create a “Dorchester Crypto” chat group based my location and interests setup in my profile.
 
 ## MVPs
 
 ### MVP0 (Pre-Launch Landing Page)
 
-Landing page based on LearnWorlds press release guidelines (so Amazon press release). Possibly with an e-mail "are you interested" subscription form to gauge initial interest.
+Landing page based on LearnWorlds press release guidelines (so Amazon press release). Possibly with an "are you interested" e-mail subscription form to gauge initial interest.
 
 ### MVP1
-#### step 1
+#### Step 1
  
 - A profile page (based on session cookies first). 
 
-#### step 2
+#### Step 2
 
-- And a chat page for chatting in your local groups. 
-- Database (storing session to local cookie link)
+- A chat page for chatting in your local groups. 
+- Database (only for storing the server-side session to local cookie links initially)
 
 ### MVP2
 
-- Search functionality for groups resulting in drop-down of local group chats
+- Search functionality for chat groups based on location and/or interests.
 
 ### MVP3
 
