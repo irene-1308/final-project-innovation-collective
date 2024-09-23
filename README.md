@@ -68,7 +68,8 @@ These are all still in ideation or under discussion.
 
 - Local friend recommendations based on your interests and friendship circle.
 - Interest prioritisation (for better friend recommendations).
-- Age filters - only chat with people in your chosen age range.
+- Images and videos in the chat.
+- Age filters - chat with people in your chosen age range.
 - AI-powered chat message verification to avoid threats, hate speech, graphic violence, bullying, etc.
 - AI-powered profile picture verification.
 - AI-powered chat group and direct message moderation.
