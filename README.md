@@ -1,4 +1,4 @@
-# Gatherly - *App strap line*
+# Gatherly - *Connect Locally, Unite Globally*
 
 ## Project Outline:
 
