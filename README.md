@@ -36,7 +36,7 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 
 - #### Step 2
 
-  - A chat page for chatting in your local groups
+  - A chat page for chatting in your local groups... Think of this as a "WhatsApp group chat" for each location and interest combination in the system.
 
 - #### Step 3
 
@@ -70,6 +70,7 @@ These are all still in ideation or under discussion.
 - Interest prioritisation (for better friend recommendations).
 - Images and videos in the chat.
 - Age filters - chat with people in your chosen age range.
+- Custom group icons and descriptions, as set by users of that chat group.
 - AI-powered chat message verification to avoid threats, hate speech, graphic violence, bullying, etc.
 - AI-powered profile picture verification.
 - AI-powered chat group and direct message moderation.
