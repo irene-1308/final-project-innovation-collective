@@ -1,15 +1,15 @@
-# INSERT WEB APP NAME HERE
+# Gatherly - *App strap line*
 
-## Project Outline
+## Project Outline:
 
 ### Problem Statement
 
-Loneliness is more prolific in today’s society than ever before. Gen Z is said to be the loneliest generation of all time. 22% of Millennials say they have zero friends. And old age loneliness is the highest its ever been.
+Loneliness is more prolific in today’s society than ever before. Gen Z, Millenials, and elderley individuals report experiencing high levels of social isolation. Gen Z are said to be the lonliest generation of all-time; 22% of Millennials say they have zero friends; and old age loneliness is the highest it's ever been.  Existing social media platforms lack focus on building lasting and meaningful connections based on mutual interest and locality. 
 
 ### Solution
 
-- A very basic social media chat app that is purely based around your interests and location.
-  So, for me for example, it would create a “Dorchester Crypto” chat group based my location and interests setup in my profile.
+A socially responsible social app that fosters community by helping like-minded individuals find and connect with others within their locality based on shared interests, hobbies and activities. Our app would be aimed at building communities and life-long friendships, both remotely and in-person.   
+So, for me for example, it would create a “Dorchester Crypto” chat group based my location and interests setup in my profile.
 
 ## MVPs
 
