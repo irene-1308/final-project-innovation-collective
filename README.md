@@ -45,7 +45,7 @@ A landing page based on LearnWorlds press release guidelines (so Amazon press re
 ### MVP3
 
 - Profile pictures
-- A profanity filter for chat messages, for example:
+- Profanity filtering for chat messages by using, for example:
   - https://www.npmjs.com/package/bad-words
   - https://www.npmjs.com/package/badwords-list
   - https://www.npmjs.com/package/obscenity
