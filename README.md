@@ -14,7 +14,7 @@ A socially responsible social app that fosters community by helping like-minded 
 
 ### Approach
 
-A mobile-first, responsive designed web application.
+- A mobile-first, responsive designed web application.
 
 ## MVPs
 
@@ -81,7 +81,7 @@ These are all still in ideation or under discussion.
 - Images and videos in the chat.
 - Age filters - chat with people in your chosen age range.
 - Custom group icons and descriptions, as set by admins/moderators of that chat group.
-- AI-powered chat message verification to avoid threats, hate speech, graphic violence, bullying, etc.
+- AI-powered chat message safeguards to avoid threats, hate speech, graphic violence, bullying, etc.
 - AI-powered profile picture verification.
 - AI-powered chat group and direct message moderation.
 
