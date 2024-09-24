@@ -2,6 +2,8 @@
 
 ### _“Connect Locally, Unite Globally”_
 
+A social app to make friends locally and meet up with like-minded people.
+
 ## Project Outline
 
 ### Problem Statement
