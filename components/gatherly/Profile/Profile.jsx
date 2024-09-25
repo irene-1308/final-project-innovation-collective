@@ -19,7 +19,7 @@ export default function Profile() {
   //   }
   // }, []);
 
-  // // Function to fetch readable address from coordinates using OpenStreetMap or other API
+  // api fetch
   // const fetchLocationData = async (latitude, longitude) => {
   //   try {
   //     const response = await fetch(
