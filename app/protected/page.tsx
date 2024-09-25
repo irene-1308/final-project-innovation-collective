@@ -1,7 +1,9 @@
-import FetchDataSteps from "@/components/tutorial/fetch-data-steps";
+// import FetchDataSteps from "@/components/tutorial/fetch-data-steps";
 import { createClient } from "@/utils/supabase/server";
-import { InfoIcon } from "lucide-react";
+// import { InfoIcon } from "lucide-react";
 import { redirect } from "next/navigation";
+import Profile from "@/components/gatherly/Profile/Profile.jsx";
+
 
 export default async function ProtectedPage() {
   const supabase = createClient();
@@ -14,7 +16,14 @@ export default async function ProtectedPage() {
     return redirect("/sign-in");
   }
 
-  return (
+  
+return (
+  <>
+  <Profile />
+  </>
+)
+
+/*   return (
     <div className="flex-1 w-full flex flex-col gap-12">
       <div className="w-full">
         <div className="bg-accent text-sm p-3 px-5 rounded-md text-foreground flex gap-3 items-center">
@@ -34,5 +43,5 @@ export default async function ProtectedPage() {
         <FetchDataSteps />
       </div>
     </div>
-  );
+  ); */
 }
