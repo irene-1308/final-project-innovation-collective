@@ -4,7 +4,6 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import Profile from "@/components/gatherly/Profile/Profile.jsx";
 
-
 export default async function ProtectedPage() {
   const supabase = createClient();
 
@@ -16,14 +15,13 @@ export default async function ProtectedPage() {
     return redirect("/sign-in");
   }
 
-  
-return (
-  <>
-  <Profile />
-  </>
-)
+  return (
+    <>
+      <Profile />
+    </>
+  );
 
-/*   return (
+  /*   return (
     <div className="flex-1 w-full flex flex-col gap-12">
       <div className="w-full">
         <div className="bg-accent text-sm p-3 px-5 rounded-md text-foreground flex gap-3 items-center">
