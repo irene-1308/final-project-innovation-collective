@@ -1,6 +1,37 @@
 import styles from "./Profile.module.css";
-
+// import { useState, useEffect } from "react";
 export default function Profile() {
+  // const [location, setLocation] = useState("Fetching location...");
+  // const [error, setError] = useState("");
+
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         fetchLocationData(latitude, longitude);
+  //       },
+  //       (error) => {
+  //         setError("Unable to retrieve location.");
+  //       }
+  //     );
+  //   } else {
+  //     setError("Geolocation is not supported by this browser.");
+  //   }
+  // }, []);
+
+  // api fetch
+  // const fetchLocationData = async (latitude, longitude) => {
+  //   try {
+  //     const response = await fetch(
+  //       `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+  //     );
+  //     const data = await response.json();
+  //     setLocation(data.display_name);
+  //   } catch (error) {
+  //     setError("Unable to retrieve location data.");
+  //   }
+  // };
+
   return (
     <>
       <section>
