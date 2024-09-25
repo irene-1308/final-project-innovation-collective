@@ -63,7 +63,6 @@ export default function RootLayout({
                 </p>
                 <ThemeSwitcher />
               </footer>
-              
             </div>
           </main>
         </ThemeProvider>
