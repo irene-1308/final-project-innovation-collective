@@ -1,42 +1,18 @@
 import styles from "./Profile.module.css";
-// import { useState, useEffect } from "react";
+import Image from "next/image";
+
 export default function Profile() {
-  // const [location, setLocation] = useState("Fetching location...");
-  // const [error, setError] = useState("");
-
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position) => {
-  //         const { latitude, longitude } = position.coords;
-  //         fetchLocationData(latitude, longitude);
-  //       },
-  //       (error) => {
-  //         setError("Unable to retrieve location.");
-  //       }
-  //     );
-  //   } else {
-  //     setError("Geolocation is not supported by this browser.");
-  //   }
-  // }, []);
-
-  // api fetch
-  // const fetchLocationData = async (latitude, longitude) => {
-  //   try {
-  //     const response = await fetch(
-  //       `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
-  //     );
-  //     const data = await response.json();
-  //     setLocation(data.display_name);
-  //   } catch (error) {
-  //     setError("Unable to retrieve location data.");
-  //   }
-  // };
-
   return (
     <>
       <section>
         <h1 className={styles.title}>Profile</h1>
-        <image src="./placeholder.svg"> </image>
+        <Image
+          src="/assets/images/sarah-johnson.jpg"
+          alt="Sarah Johnson"
+          className="profileImage"
+          width={250}
+          height={250}
+        />
         <h2 className="userName">Sarah Johnson</h2>
       </section>
 
