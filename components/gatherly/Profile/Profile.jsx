@@ -17,6 +17,11 @@ export default function Profile() {
       </section>
 
       <section>
+        <h3>Location:</h3>
+        <p className="location">The Shire</p>
+      </section>
+
+      <section>
         <h3>About me:</h3>
         <p className="bio">
           Sarah uses the app to stay socially active in her retirement. She
