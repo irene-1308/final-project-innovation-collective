@@ -8,10 +8,17 @@ export default function Profile() {
         <image src="./placeholder.svg"> </image>
         <h2 className="userName">Sarah Johnson</h2>
       </section>
-    
+
       <section>
         <h3>About me:</h3>
-        <p className="bio">Sarah uses the app to stay socially active in her retirement. She regularly attends local book club meetings and is part of a knitting circle she found through the app. She also creates events for volunteer groups that do community service projects, like organizing food drives or planting trees. Sarah enjoys connecting with younger people and those new to town who might need guidance or mentorship.</p>
+        <p className="bio">
+          Sarah uses the app to stay socially active in her retirement. She
+          regularly attends local book club meetings and is part of a knitting
+          circle she found through the app. She also creates events for
+          volunteer groups that do community service projects, like organizing
+          food drives or planting trees. Sarah enjoys connecting with younger
+          people and those new to town who might need guidance or mentorship.
+        </p>
       </section>
 
       <section>
