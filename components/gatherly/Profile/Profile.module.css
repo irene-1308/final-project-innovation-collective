@@ -1,5 +1,148 @@
-.title {
+@font-face {
+  font-family: "PoetsenOne-Regular";
+  src: url("/final-project-innovation-collective/public/assets/PoetsenOne-Regular.ttf");
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.profileContainer {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.backgroundImage {
+  position: absolute;
+  border: #000000 solid 5px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.profileContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe8a3;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  pointer-events: none;
+}
+.heroSection {
+  position: relative;
+  border: #000000 solid 5px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out 0.5s backwards;
+}
+.imageWrapper {
+  width: 40vw;
+  height: 40vw;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileImage {
+  width: 50vh;
+  height: 50vh;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.userName {
+  font:
+    700 2rem "PoetsenOne-Regular",
+    sans-serif;
   font-size: 2rem;
-  font-weight: bold;
+  margin-top: 1rem;
+  color: #000000;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.userName:hover {
+  color: #6ff2a7;
+}
+.aboutSection,
+.interestsSection {
+  position: relative;
+  border: #000000 solid 5px;
+  z-index: 2;
+  margin-bottom: 2rem;
+  background-color: rgba(252, 209, 156, 0.8);
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  animation: fadeIn 1.5s ease-in-out 0.7s backwards;
+}
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #000000;
   margin-bottom: 1rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+.sectionTitle:hover {
+  color: #6ff2a7;
+}
+.interestsList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+.interestItem {
+  background-color: #6ff2a7;
+  color: #000000;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.interestItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #757575;
+  color: white;
 }
