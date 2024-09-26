@@ -17,7 +17,7 @@
   border-radius: 12px;
 }
 
-:global(.dark) .chatContainer {
+ :global(.dark).chatContainer {
   background-color: rgba(0, 0, 0, 0.85);
   background-image: url("/assets/images/dark_background.png");
   background-size: cover;
