@@ -10,6 +10,9 @@ import "./globals.css";
 import Footer from "@/components/gatherly/Footer/Footer.jsx";
 import Menu from "@/components/gatherly/Menu/Menu.jsx";
 
+console.log("OUR_URL");
+console.log(process.env.NEXT_PUBLIC_SUPABASE_URL);
+
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
