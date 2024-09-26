@@ -1,13 +1,14 @@
 // import DeployButton from "@/components/deploy-button";
 import { EnvVarWarning } from "@/components/env-var-warning";
 import HeaderAuth from "@/components/header-auth";
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
+import Footer from "@/components/gatherly/Footer/Footer.jsx";
+import Menu from "@/components/gatherly/Menu/Menu.jsx";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -59,25 +60,14 @@ export default function RootLayout({
                   </div>
                   {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
                 </div>
+                <Menu />
               </nav>
+              
               <div className="flex flex-col gap-20 max-w-5xl p-5">
                 {children}
               </div>
 
-              <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-1">
-                <p>
-                  Powered by{" "}
-                  <a
-                    href="https://github.com/SchoolOfCode/final-project-innovation-collective"
-                    target="_blank"
-                    className="font-bold hover:underline"
-                    rel="noreferrer"
-                  >
-                    Innovation Collective
-                  </a>
-                </p>
-                <ThemeSwitcher />
-              </footer>
+              <Footer />
             </div>
           </main>
         </ThemeProvider>
