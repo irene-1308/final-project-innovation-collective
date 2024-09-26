@@ -36,12 +36,18 @@ export default function Profile() {
         <h2 className={styles.sectionTitle}>About me</h2>
         <div className={styles.bioWrapper}>
           <p className={styles.bio}>
-            Sarah uses the app to stay socially active in her retirement. She
-            regularly attends local book club meetings and is part of a knitting
-            circle she found through the app. She also creates events for
-            volunteer groups that do community service projects, like organizing
-            food drives or planting trees. Sarah enjoys connecting with younger
-            people and those new to town who might need guidance or mentorship.
+            Hi, I&apos;m Sarah! Since retiring, I&apos;ve been using this app to
+            keep myself socially active and connected to the community.
+            You&apos;ll probably find me at a local book club meeting or
+            knitting circle - I&apos;ve met some lovely people through both!
+            I&apos;m also big on giving back, so I organise events for volunteer
+            groups, whether it&apos;s planting trees or setting up food drives.
+            Oh, and did I mention I&apos;m a bit of a thrill-seeker? I&apos;ve
+            taken up sky-diving - yes, you read that right! There&apos;s
+            something about the rush of it that makes me feel alive. I also love
+            meeting younger people and helping out anyone new to town, whether
+            they need a bit of guidance or just someone to chat with.
+            Life&apos;s about staying curious and connected, isn&apos;t it?
           </p>
         </div>
       </section>
