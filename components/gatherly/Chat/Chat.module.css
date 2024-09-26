@@ -68,7 +68,7 @@ body.dark .messageOutput {
 }
 .messageOutput {
   height: 300px;
-  resize-vertical: none;
+  resize: vertical;
 }
 .chatGroupSelect {
   appearance: none;
