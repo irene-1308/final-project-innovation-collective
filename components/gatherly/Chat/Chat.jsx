@@ -9,7 +9,7 @@ import styles from "./Chat.module.css";
 // Create a Supabase client for interacting with the Supabase database
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 );
 
 /*
@@ -58,7 +58,7 @@ export default function Chat(props) {
         setMessageOutput(
           chats
             .map((chat) => `${chat.user_id}\n${chat.chat_message}`)
-            .join("\n\n")
+            .join("\n\n"),
         );
       }
     };
@@ -84,9 +84,9 @@ export default function Chat(props) {
               "\n\n" +
               payload.new.user_id +
               "\n" +
-              payload.new.chat_message
+              payload.new.chat_message,
           );
-        }
+        },
       )
       .subscribe();
 
