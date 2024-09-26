@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   background-image: url("/assets/images/background.png");
   background-size: cover; /* Ensures the image covers the full width and height */
   background-position: center;
