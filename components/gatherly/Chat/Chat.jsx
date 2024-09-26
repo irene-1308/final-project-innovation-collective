@@ -9,7 +9,7 @@ import styles from "./Chat.module.css";
 // Create a Supabase client for interacting with the Supabase database
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
 /*
@@ -47,9 +47,13 @@ export default function Chat(props) {
   */
   useEffect(() => {
     const fetchData = async () => {
-      let { data: chats, error } = await supabase.from("chats").select("*");
-      // .eq("location", location)
-      // .eq("interest", interest);
+      // let { data: chats, error } = await supabase.from("chats").select("*"); // Original, working GET test code that only returns the chats table data (not the profiles table data)
+      let { data: chats, error } = await supabase.from("chats").select(`
+        *,
+        profiles (
+          *
+        )
+      `);
 
       if (error) {
         console.error("Error fetching chats:", error);
@@ -57,8 +61,10 @@ export default function Chat(props) {
         // Update the messageOutput state with fetched chats
         setMessageOutput(
           chats
-            .map((chat) => `${chat.user_id}\n${chat.chat_message}`)
-            .join("\n\n"),
+            .map(
+              (chat) => `${chat.profiles.display_name}\n${chat.chat_message}`
+            )
+            .join("\n\n")
         );
       }
     };
@@ -70,13 +76,15 @@ export default function Chat(props) {
   Function: Real-time Subscription useEffect hook
   Description: useEffect hook to set up real-time subscription to the chats table and populate the messageOutput state with new messages
   */
-  useEffect(() => {
+  /*   useEffect(() => {
     const channels = supabase
       .channel("custom-insert-channel")
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "chats" },
         (payload) => {
+          console.log(payload);
+
           // Update the messageOutput state with the new chat message
           setMessageOutput(
             (prevMessageOutput) =>
@@ -84,9 +92,46 @@ export default function Chat(props) {
               "\n\n" +
               payload.new.user_id +
               "\n" +
-              payload.new.chat_message,
+              payload.new.chat_message
           );
-        },
+        }
+      )
+      .subscribe();
+
+    // Cleanup subscription on component unmount
+    return () => {
+      supabase.removeChannel(channels);
+    };
+  }, []); */
+  useEffect(() => {
+    const channels = supabase
+      .channel("custom-insert-channel")
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "chats" },
+        async (payload) => {
+          // Extract the user_id from the inserted chat row
+          const userId = payload.new.user_id;
+
+          // Query the profiles table to get the display_name for the user_id
+          const { data, error } = await supabase
+            .from("profiles")
+            .select("display_name")
+            .eq("user_id", userId)
+            .single(); // Assuming user_id is unique
+
+          if (error) {
+            console.error("Error fetching display_name:", error);
+          } else {
+            const displayName = data?.display_name;
+
+            // Update the messageOutput state with the new chat message and the user's display_name
+            setMessageOutput(
+              (prevMessageOutput) =>
+                `${prevMessageOutput}\n\n${displayName}\n${payload.new.chat_message}`
+            );
+          }
+        }
       )
       .subscribe();
 
@@ -149,13 +194,20 @@ export default function Chat(props) {
   Return: Chat component JSX
   */
   return (
-    <>
-      <section>
+    <div className={styles.chatContainer}>
+      <section className={styles.chatSection}>
         <h1 className={styles.title}>Chat</h1>
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form
+          onSubmit={(event) => handleSubmit(event)}
+          className={styles.chatForm}
+        >
           <div>
             <label htmlFor="chatGroup">Chat Group </label>
-            <select name="chatGroup" id="chatGroup">
+            <select
+              name="chatGroup"
+              id="chatGroup"
+              className={styles.chatGroupSelect}
+            >
               <option data-location="shire" data-interest="book-clubs">
                 The Shire - Book Clubs
               </option>
@@ -165,37 +217,44 @@ export default function Chat(props) {
               <option data-location="shire" data-interest="sky-diving">
                 The Shire - Sky-diving
               </option>
-              <option data-location="shire" data-interest="crypto">
-                The Shire - Crypto
+              <option data-location="shire" data-interest="knitting">
+                The Shire - Knitting
+              </option>
+              <option data-location="shire" data-interest="gardening">
+                The Shire - Gardening
+              </option>
+              <option data-location="shire" data-interest="mentoring">
+                The Shire - Mentoring
               </option>
             </select>
           </div>
-          <br />
           <p>
             <label htmlFor="messageOutput">Group Messages</label>
           </p>
           <textarea
             id="messageOutput"
             name="messageOutput"
-            rows="11"
-            cols="28"
+            className={styles.messageOutput}
             value={messageOutput}
             readOnly
           ></textarea>
-
           <div>
-            <br />
             <input
               type="text"
               id="chatMessage"
               name="chatMessage"
               placeholder="Message"
+              value={chatMessage}
+              onChange={(e) => setChatMessage(e.target.value)}
               required
+              className={styles.inputField}
             />
-            <button type="submit">Send</button>
+            <button type="submit" className={styles.sendButton}>
+              Send
+            </button>
           </div>
         </form>
       </section>
-    </>
+    </div>
   );
 }
