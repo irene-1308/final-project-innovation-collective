@@ -5,6 +5,7 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
@@ -36,7 +37,21 @@ export default function RootLayout({
             <div className="flex-1 w-full flex flex-col gap-20 items-center">
               <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
                 <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
-                  <div className="flex gap-5 items-center font-semibold text-4xl">
+                  <div className="flex gap-2 items-center font-semibold text-4xl">
+                    <Image
+                      src="/assets/images/logo_light.png"
+                      alt="gatherly logo"
+                      className="h-8 w-auto dark:hidden"
+                      width={32}
+                      height={32}
+                    />
+                    <Image
+                      src="/assets/images/logo_dark.png"
+                      alt="gatherly logo"
+                      className="h-8 w-auto hidden dark:block"
+                      width={32}
+                      height={32}
+                    />
                     <Link href={"/"}>Gatherly</Link>
                     <div className="flex items-center gap-2">
                       {/* <DeployButton /> */}
@@ -53,7 +68,7 @@ export default function RootLayout({
                 <p>
                   Powered by{" "}
                   <a
-                    href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
+                    href="https://github.com/SchoolOfCode/final-project-innovation-collective"
                     target="_blank"
                     className="font-bold hover:underline"
                     rel="noreferrer"
