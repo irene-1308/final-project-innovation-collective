@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import styles from "./Footer.module.css";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 
 function Footer() {
@@ -10,12 +10,20 @@ function Footer() {
           <p className={styles.footerTitle}>Find us on:</p>
           <ul className={styles.socialLinks}>
             <li>
-              <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Facebook
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Instagram
               </a>
             </li>
