@@ -39,7 +39,7 @@ export default function Header() {
                 className="dark:hidden"
                 width={120}
                 height={120}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: "auto", height: "auto" }}
               />
               <Image
                 src="/assets/images/logo_dark.png"
@@ -47,7 +47,7 @@ export default function Header() {
                 className="hidden dark:block"
                 width={120}
                 height={120}
-                style={{ width: 'auto', height: 'auto' }}
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
             <h1 className="sr-only">
