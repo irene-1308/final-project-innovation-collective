@@ -49,7 +49,7 @@ export const signInAction = async (formData: FormData) => {
     return encodedRedirect("error", "/sign-in", error.message);
   }
 
-  return redirect("/protected/chat");
+  return redirect("/protected/profile");
 };
 
 export const forgotPasswordAction = async (formData: FormData) => {

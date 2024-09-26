@@ -17,7 +17,7 @@ export default async function ProtectedPage() {
 
   return (
     <>
-      <Chat />
+      <Chat userId={user.id} />
     </>
   );
 
