@@ -143,7 +143,7 @@
   transition: color 0.3s ease;
 }
 .sectionTitle:hover {
-  color: #6ff2a7;
+  color: #f2be6f;
 }
 .interestsList {
   list-style-type: none;
@@ -153,7 +153,7 @@
   gap: 1rem;
 }
 .interestItem {
-  background-color: #6ff2a7;
+  background-color: #f7be6f;
   color: #000000;
   padding: 0.75rem;
   border-radius: 8px;
