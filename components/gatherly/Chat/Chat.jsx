@@ -186,11 +186,11 @@ export default function Chat(props) {
               id="chatGroup"
               className={styles.chatGroupSelect}
             >
-              <option data-location="shire" data-interest="book-clubs">
-                The Shire - Book Clubs
-              </option>
               <option data-location="shire" data-interest="sky-diving">
                 The Shire - Sky-diving
+              </option>
+              <option data-location="shire" data-interest="book-clubs">
+                The Shire - Book Clubs
               </option>
               <option data-location="shire" data-interest="volunteering">
                 The Shire - Volunteering

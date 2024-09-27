@@ -55,8 +55,8 @@ export default function Profile() {
       <section className={styles.interestsSection}>
         <h2 className={styles.sectionTitle}>Interests</h2>
         <ul className={styles.interestsList}>
-          <li className={styles.interestItem}>Book clubs</li>
           <li className={styles.interestItem}>Sky-diving</li>
+          <li className={styles.interestItem}>Book clubs</li>
           <li className={styles.interestItem}>Volunteering</li>
           <li className={styles.interestItem}>Knitting</li>
           <li className={styles.interestItem}>Gardening</li>
