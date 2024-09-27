@@ -1,23 +1,22 @@
 .chatContainer {
-  position: relative;
-  width: 100%; /* Takes full width */
-  max-width: 1200px; /* You can adjust this value to make it wider */
+  /*   position: relative;
+  width: 100%;
+  max-width: 1200px; */
   margin: 0 auto;
-  padding: 2rem;
-  min-height: 100vh;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.85);
   background-image: url("/assets/images/background.png");
   background-size: cover; /* Ensures the image covers the full width and height */
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   border-radius: 12px;
 }
 
-:global(.dark) .chatContainer {
+body.dark .chatContainer {
   background-color: rgba(0, 0, 0, 0.85);
   background-image: url("/assets/images/dark_background.png");
   background-size: cover;
@@ -40,7 +39,7 @@ body.dark .title {
 }
 
 .chatForm {
-  width: 100%; /* Full width */
+  min-width: 50vw; /* Half of viewport width */
   max-width: 900px; /* You can adjust this value */
   display: flex;
   flex-direction: column;
@@ -53,6 +52,12 @@ body.dark .title {
 
 body.dark .chatForm {
   background-color: rgba(0, 0, 0, 0.7); /* Dark mode translucent background */
+}
+
+.inputContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 6px;
 }
 
 .inputField,
@@ -76,16 +81,17 @@ body.dark .messageOutput {
 }
 
 .messageOutput {
-  height: 300px;
+  height: 280px;
   resize: vertical;
 }
 
 .chatGroupSelect {
   appearance: none;
   background-color: rgba(255, 255, 255, 0.9);
-  background-image: url("/assets/icons/chevron-down.svg");
+  /* background-image: url("/assets/icons/chevron-down.svg"); */
   background-repeat: no-repeat;
   background-position: right 10px center;
+  font-weight: 600;
 }
 
 body.dark .chatGroupSelect {
@@ -96,31 +102,30 @@ body.dark .chatGroupSelect {
 .chatGroupSelect:focus,
 .messageOutput:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  /* border-color: #007bff; */
+  box-shadow: 0 0 5px rgba(127, 127, 127, 0.3);
 }
 
 body.dark .inputField:focus,
 body.dark .chatGroupSelect:focus,
 body.dark .messageOutput:focus {
   border-color: #fff;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .sendButton {
-  background-color: #4b4648;
+  background-color: #000;
   color: white;
-  padding: 12px;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
 }
 
 .sendButton:hover {
-  background-color: #545252;
+  background-color: #333;
 }
 
 body.dark .sendButton {

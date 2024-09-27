@@ -7,7 +7,7 @@ function Footer() {
       <div className={styles.footerContainer}>
         {/* Social Links */}
         <div className={styles.footerSection}>
-          <p className={styles.footerTitle}>Find us on:</p>
+          <p className={styles.footerTitle}>Find us on</p>
           <ul className={styles.socialLinks}>
             <li>
               <a
@@ -37,7 +37,7 @@ function Footer() {
 
         {/* Contact Section */}
         <div className={styles.footerSection}>
-          <p className={styles.footerTitle}>Contact us:</p>
+          <p className={styles.footerTitle}>Contact us</p>
           <address>
             <a href="mailto:hello@gatherly.co.uk" className={styles.emailLink}>
               hello@gatherly.co.uk

@@ -8,10 +8,10 @@ import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import Footer from "@/components/gatherly/Footer/Footer.jsx";
-import Menu from "@/components/gatherly/Menu/Menu.jsx";
 
-console.log("OUR_URL");
-console.log(process.env.NEXT_PUBLIC_SUPABASE_URL);
+// Supabase server-side URL test (should be visible in Render.com deployment logs in uncommented below)
+/* console.log("OUR_PUBLIC_SUPABASE_URL");
+console.log(process.env.NEXT_PUBLIC_SUPABASE_URL); */
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -20,7 +20,7 @@ const defaultUrl = process.env.VERCEL_URL
 export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: "Gatherly",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  description: "Connect Locally, Unite Globally",
 };
 
 export default function RootLayout({
@@ -33,7 +33,8 @@ export default function RootLayout({
       <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          // defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
@@ -57,16 +58,16 @@ export default function RootLayout({
                       height={32}
                     />
                     <Link href={"/"}>Gatherly</Link>
-                    <div className="flex items-center gap-2">
-                      {/* <DeployButton /> */}
-                    </div>
+                    {/* <div className="flex items-center gap-2">
+                      <DeployButton />
+                    </div> */}
                   </div>
                   {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
                 </div>
-                <Menu />
               </nav>
 
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
+              {/* <div className="flex flex-col gap-20 max-w-5xl p-5"> */}
+              <div className="flex flex-col max-w-5xl">
                 {children}
               </div>
 
