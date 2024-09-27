@@ -9,7 +9,7 @@ import styles from "./Chat.module.css";
 // Create a Supabase client for interacting with the Supabase database
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
 /*
@@ -52,7 +52,7 @@ export default function Chat(props) {
         `*,
           profiles (
             *
-          )`,
+          )`
       );
       /* 
       .eq("location", "shire")
@@ -67,9 +67,9 @@ export default function Chat(props) {
           chats
             .map(
               (chat) =>
-                `➡️  ${chat.profiles.display_name}     (${new Date(chat.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${chat.chat_message}`,
+                `➡️  ${chat.profiles.display_name}     (${new Date(chat.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${chat.chat_message}`
             )
-            .join("\n\n"),
+            .join("\n\n")
         );
       }
     };
@@ -106,10 +106,10 @@ export default function Chat(props) {
             // Update the messageOutput state with the new chat message and the user's display_name
             setMessageOutput(
               (prevMessageOutput) =>
-                `${prevMessageOutput}\n\n➡️  ${displayName}     (${new Date(payload.new.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${payload.new.chat_message}`,
+                `${prevMessageOutput}\n\n➡️  ${displayName}     (${new Date(payload.new.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${payload.new.chat_message}`
             );
           }
-        },
+        }
       )
       .subscribe();
 
@@ -186,11 +186,11 @@ export default function Chat(props) {
               id="chatGroup"
               className={styles.chatGroupSelect}
             >
-              <option data-location="shire" data-interest="book-clubs">
-                The Shire - Book Clubs
-              </option>
               <option data-location="shire" data-interest="sky-diving">
                 The Shire - Sky-diving
+              </option>
+              <option data-location="shire" data-interest="book-clubs">
+                The Shire - Book Clubs
               </option>
               <option data-location="shire" data-interest="volunteering">
                 The Shire - Volunteering
