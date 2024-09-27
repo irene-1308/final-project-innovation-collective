@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255);
   background-image: url("/assets/images/background.png");
   background-size: cover; /* Ensures the image covers the full width and height */
   background-position: center;
@@ -17,7 +17,7 @@
   border-radius: 12px;
 }
 
-body.dark .chatContainer {
+:global(.dark) .chatContainer {
   background-color: rgba(0, 0, 0, 0.85);
   background-image: url("/assets/images/dark_background.png");
   background-size: cover;
@@ -108,7 +108,7 @@ body.dark .messageOutput:focus {
 }
 
 .sendButton {
-  background-color: #000;
+  background-color: #4b4648;
   color: white;
   padding: 12px;
   border-radius: 8px;
@@ -120,7 +120,7 @@ body.dark .messageOutput:focus {
 }
 
 .sendButton:hover {
-  background-color: #333;
+  background-color: #545252;
 }
 
 body.dark .sendButton {
