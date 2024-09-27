@@ -31,6 +31,7 @@ export default function Profile() {
           />
         </div>
         <h1 className={styles.userName}>Sarah Johnson</h1>
+        <h2 className={styles.sectionTitle}>The Shire</h2>
       </section>
       <section className={styles.aboutSection}>
         <h2 className={styles.sectionTitle}>About me</h2>

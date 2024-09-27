@@ -48,12 +48,16 @@ export default function Chat(props) {
   useEffect(() => {
     const fetchData = async () => {
       // let { data: chats, error } = await supabase.from("chats").select("*"); // Original, working GET test code that only returns the chats table data (not the profiles table data)
-      let { data: chats, error } = await supabase.from("chats").select(`
-        *,
-        profiles (
-          *
-        )
-      `);
+      let { data: chats, error } = await supabase.from("chats").select(
+        `*,
+          profiles (
+            *
+          )`,
+      );
+      /* 
+      .eq("location", "shire")
+      .eq("interest", "sky-diving");
+      */
 
       if (error) {
         console.error("Error fetching chats:", error);
@@ -62,7 +66,8 @@ export default function Chat(props) {
         setMessageOutput(
           chats
             .map(
-              (chat) => `${chat.profiles.display_name}\n${chat.chat_message}`,
+              (chat) =>
+                `➡️  ${chat.profiles.display_name}     (${new Date(chat.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${chat.chat_message}`,
             )
             .join("\n\n"),
         );
@@ -76,33 +81,6 @@ export default function Chat(props) {
   Function: Real-time Subscription useEffect hook
   Description: useEffect hook to set up real-time subscription to the chats table and populate the messageOutput state with new messages
   */
-  /*   useEffect(() => {
-    const channels = supabase
-      .channel("custom-insert-channel")
-      .on(
-        "postgres_changes",
-        { event: "INSERT", schema: "public", table: "chats" },
-        (payload) => {
-          console.log(payload);
-
-          // Update the messageOutput state with the new chat message
-          setMessageOutput(
-            (prevMessageOutput) =>
-              prevMessageOutput +
-              "\n\n" +
-              payload.new.user_id +
-              "\n" +
-              payload.new.chat_message
-          );
-        }
-      )
-      .subscribe();
-
-    // Cleanup subscription on component unmount
-    return () => {
-      supabase.removeChannel(channels);
-    };
-  }, []); */
   useEffect(() => {
     const channels = supabase
       .channel("custom-insert-channel")
@@ -123,12 +101,12 @@ export default function Chat(props) {
           if (error) {
             console.error("Error fetching display_name:", error);
           } else {
-            const displayName = data?.display_name;
+            const displayName = data.display_name;
 
             // Update the messageOutput state with the new chat message and the user's display_name
             setMessageOutput(
               (prevMessageOutput) =>
-                `${prevMessageOutput}\n\n${displayName}\n${payload.new.chat_message}`,
+                `${prevMessageOutput}\n\n➡️  ${displayName}     (${new Date(payload.new.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${payload.new.chat_message}`,
             );
           }
         },
@@ -151,20 +129,20 @@ export default function Chat(props) {
 
       // Function to insert new chat messages into the Supabase database - chats table.
       const fetchData = async () => {
-        try {
-          // let { data: chats, error } = await supabase.from("chats").select("*"); // Original GET test code as copied from our Supabase API docs
-          const {} = await supabase
-            .from("chats")
-            .insert([
-              {
-                user_id: userId,
-                location: location,
-                interest: interest,
-                chat_message: chatMessage,
-              },
-            ])
-            .select();
-        } catch (error) {
+        // let { data: chats, error } = await supabase.from("chats").select("*"); // Original GET test code as copied from our Supabase API docs
+        const { error } = await supabase
+          .from("chats")
+          .insert([
+            {
+              user_id: userId,
+              location: location,
+              interest: interest,
+              chat_message: chatMessage,
+            },
+          ])
+          .select();
+
+        if (error) {
           console.error("Error fetching chats:", error);
         }
       };
@@ -202,7 +180,7 @@ export default function Chat(props) {
           className={styles.chatForm}
         >
           <div>
-            <label htmlFor="chatGroup">Chat Group </label>
+            <label htmlFor="chatGroup">Chat Group</label>
             <select
               name="chatGroup"
               id="chatGroup"
@@ -211,11 +189,11 @@ export default function Chat(props) {
               <option data-location="shire" data-interest="book-clubs">
                 The Shire - Book Clubs
               </option>
-              <option data-location="shire" data-interest="volunteering">
-                The Shire - Volunteering
-              </option>
               <option data-location="shire" data-interest="sky-diving">
                 The Shire - Sky-diving
+              </option>
+              <option data-location="shire" data-interest="volunteering">
+                The Shire - Volunteering
               </option>
               <option data-location="shire" data-interest="knitting">
                 The Shire - Knitting
@@ -238,7 +216,7 @@ export default function Chat(props) {
             value={messageOutput}
             readOnly
           ></textarea>
-          <div>
+          <div className={styles.inputContainer}>
             <input
               type="text"
               id="chatMessage"
@@ -248,6 +226,7 @@ export default function Chat(props) {
               onChange={(e) => setChatMessage(e.target.value)}
               required
               className={styles.inputField}
+              autoFocus
             />
             <button type="submit" className={styles.sendButton}>
               Send

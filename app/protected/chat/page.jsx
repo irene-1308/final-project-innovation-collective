@@ -15,6 +15,46 @@ export default async function ProtectedPage() {
     return redirect("/sign-in");
   }
 
+  /*
+  Temporary Gatherly profile record creation code while the profile creation functionality is not yet implemented
+  */
+  // Check if the user has a profile
+  const { data: profiles, error } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("user_id", user.id);
+
+  if (error) {
+    console.error(
+      "Error checking if profile exists (Gatherly temporary profile creation code):",
+      error,
+    );
+  }
+
+  // If the user does not have a profile, create a temporary one
+  if (profiles.length === 0) {
+    const { error } = await supabase.from("profiles").insert([
+      {
+        user_id: user.id,
+        display_name:
+          "New user " +
+          user.id.substring(0, 5) +
+          " (temporary display name until profile creation is implemented)",
+      },
+    ]);
+
+    if (error) {
+      console.error(
+        "Error creating profile (Gatherly temporary profile creation code):",
+        error,
+      );
+    }
+  }
+
+  /*
+  End of temporary Gatherly profile record creation code
+  */
+
   return (
     <>
       <Chat userId={user.id} />

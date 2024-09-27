@@ -26,7 +26,8 @@ export default function Header() {
       </div>
       {/* Content Box - Centered and smaller */}
       <div className="relative h-full flex items-center justify-center">
-        <div className="bg-white dark:bg-black bg-opacity-100 dark:bg-opacity-60 p-8 rounded-full shadow-sm max-w-3xl w-full mx-4 min-h-[400px] flex flex-col justify-center">
+        {/* <div className="bg-white dark:bg-black bg-opacity-100 dark:bg-opacity-60 p-8 rounded-full shadow-sm max-w-3xl w-full mx-4 min-h-[400px] flex flex-col justify-center"> */}
+        <div className="bg-white dark:bg-black bg-opacity-100 dark:bg-opacity-60 p-10 rounded-full max-w-3xl w-full mx-4 min-h-[400px] flex flex-col justify-center">
           <div className="flex flex-col items-center gap-6">
             <div className="text-center">
               <p className="text-3xl font-semibold">Welcome to</p>
