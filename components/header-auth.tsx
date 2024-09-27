@@ -66,6 +66,5 @@ export default async function AuthButton() {
         <Link href="/sign-up">Sign up</Link>
       </Button>
     </div>
-    
   );
 }

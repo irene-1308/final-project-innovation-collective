@@ -27,7 +27,7 @@ export default async function ProtectedPage() {
   if (error) {
     console.error(
       "Error checking if profile exists (Gatherly temporary profile creation code):",
-      error
+      error,
     );
   }
 
@@ -46,7 +46,7 @@ export default async function ProtectedPage() {
     if (error) {
       console.error(
         "Error creating profile (Gatherly temporary profile creation code):",
-        error
+        error,
       );
     }
   }
