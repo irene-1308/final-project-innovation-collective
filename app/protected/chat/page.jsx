@@ -27,7 +27,7 @@ export default async function ProtectedPage() {
   if (error) {
     console.error(
       "Error checking if profile exists (Gatherly temporary profile creation code):",
-      error,
+      error
     );
   }
 
@@ -38,7 +38,7 @@ export default async function ProtectedPage() {
         user_id: user.id,
         display_name:
           "New user " +
-          user.id.substring(0, 5) +
+          user.id.substring(0, 6) +
           " (temporary display name until profile creation is implemented)",
       },
     ]);
@@ -46,7 +46,7 @@ export default async function ProtectedPage() {
     if (error) {
       console.error(
         "Error creating profile (Gatherly temporary profile creation code):",
-        error,
+        error
       );
     }
   }

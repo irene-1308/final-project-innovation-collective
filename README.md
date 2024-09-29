@@ -93,15 +93,24 @@ These are all still in ideation or under discussion.
 
 - https://gatherly-6tik.onrender.com/
 
+### Final Presentation
+
+- Gatherly Final Presentation (as presented on School of Code Bootcamp 17's final project presentation day on Friday, 27 September 2024)
+  - https://gamma.app/docs/Innovation-Collective-oox9d4mektcz3du
+
 ### GitHub Repo
 
-- GitHub Repo - https://github.com/SchoolOfCode/final-project-innovation-collective
+- GitHub Repo (this page)
+  - https://github.com/SchoolOfCode/final-project-innovation-collective
 
 ### Planning
 
-- Figma FigJam (Planning and Ideation) - https://www.figma.com/board/d9VgoEVmAFsYkY8wTgquKX/Week-13-Planning?node-id=0-1&t=MwFXrHtjVazMh9wF-1
+- Figma FigJam (Planning and Ideation)
+  - https://www.figma.com/board/d9VgoEVmAFsYkY8wTgquKX/Week-13-Planning?node-id=0-1&t=MwFXrHtjVazMh9wF-1
 
 ### Team Manifesto Documents
 
-- Team Manifesto Google Doc - https://docs.google.com/document/d/1lQ_oJvjzh-zlh6_LrnnaTfCYVEizhvxElQyhaVS_zgk
-- Team Manifesto Gamma Presentation -  https://gamma.app/docs/Team-Manifesto-3cmt7t9votlqm6r?mode=doc
+- Team Manifesto Google Doc
+  - https://docs.google.com/document/d/1lQ_oJvjzh-zlh6_LrnnaTfCYVEizhvxElQyhaVS_zgk
+- Team Manifesto Gamma Presentation
+  - https://gamma.app/docs/Team-Manifesto-3cmt7t9votlqm6r?mode=doc
