@@ -38,7 +38,7 @@ export default async function ProtectedPage() {
         user_id: user.id,
         display_name:
           "New user " +
-          user.id.substring(0, 5) +
+          user.id.substring(0, 6) +
           " (temporary display name until profile creation is implemented)",
       },
     ]);
