@@ -1,7 +1,12 @@
 import styles from "./Footer.module.css";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import { createClient } from "@/utils/supabase/server";
 
-function Footer() {
+async function Footer() {
+  const {
+    data: { user },
+  } = await createClient().auth.getUser();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
@@ -58,6 +63,11 @@ function Footer() {
               Innovation Collective
             </a>
           </p>
+          {user && (
+            <>
+              <p className={styles.loggedInAs}>Logged in as {user.email}</p>
+            </>
+          )}
         </div>
       </div>
 
