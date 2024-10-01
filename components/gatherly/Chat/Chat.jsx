@@ -42,16 +42,25 @@ export default function Chat(props) {
   }
 
   /*
+  Function: Format Chat Message Helper Function
+  Description: Function to format chat messages before they are displayed in the messageOutput textarea
+  */
+  function formatChatMessage(displayName, date, chatMessage) {
+    return `➡️  ${displayName}     (${new Date(date).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${chatMessage}`;
+  }
+
+  /*
   Function: Fetch Data useEffect hook on component mount
   Description: useEffect hook to fetch data from the chats table on component mount and populate the messageOutput state with the fetched data
   */
   useEffect(() => {
+    // Function to fetch data from the Supabase database - chats table
     const fetchData = async () => {
-      // let { data: chats, error } = await supabase.from("chats").select("*"); // Original, working GET test code that only returns the chats table data (not the profiles table data)
+      // Fetch all chat messages from the chats table, and join the profiles table to it to get the display_name for each chat message
       let { data: chats, error } = await supabase.from("chats").select(
         `*,
           profiles (
-            *
+            display_name
           )`,
       );
       /* 
@@ -67,19 +76,21 @@ export default function Chat(props) {
           chats
             .map(
               (chat) =>
-                `➡️  ${chat.profiles.display_name}     (${new Date(chat.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${chat.chat_message}`,
+                `${formatChatMessage(chat.profiles.display_name, chat.created_at, chat.chat_message)}`,
             )
             .join("\n\n"),
         );
       }
     };
-
+    // Call the fetchData function to fetch data from the database
     fetchData();
   }, []);
 
   /*
   Function: Real-time Subscription useEffect hook
-  Description: useEffect hook to set up real-time subscription to the chats table and populate the messageOutput state with new messages
+  Description:
+  useEffect hook to set up real-time subscription to the chats table and populate the messageOutput state with new messages
+  So, it listens for new chat messages inserted into the chats table and updates the messageOutput state with the new chat message and the user's display_name
   */
   useEffect(() => {
     const channels = supabase
@@ -106,7 +117,7 @@ export default function Chat(props) {
             // Update the messageOutput state with the new chat message and the user's display_name
             setMessageOutput(
               (prevMessageOutput) =>
-                `${prevMessageOutput}\n\n➡️  ${displayName}     (${new Date(payload.new.created_at).toLocaleString("en-GB", { timeZone: "Europe/London" })})\n      💬 ${payload.new.chat_message}`,
+                `${prevMessageOutput}\n\n${formatChatMessage(displayName, payload.new.created_at, payload.new.chat_message)}`,
             );
           }
         },
@@ -121,14 +132,16 @@ export default function Chat(props) {
 
   /*
   Function: Form Submission useEffect hook
-  Description: useEffect hook that runs when the form is submitted and isSubmitted state is set to true
+  Description:
+  useEffect hook that runs when the form is submitted and isSubmitted state is set to true.
+  So, it inserts the new chat message into the chats table and resets the isSubmitted state.
   */
   useEffect(() => {
     if (isSubmitted) {
       // Perform actions when the form is submitted
 
       // Function to insert new chat messages into the Supabase database - chats table.
-      const fetchData = async () => {
+      const insertData = async () => {
         // let { data: chats, error } = await supabase.from("chats").select("*"); // Original GET test code as copied from our Supabase API docs
         const { error } = await supabase
           .from("chats")
@@ -147,8 +160,8 @@ export default function Chat(props) {
         }
       };
 
-      // Call the fetchData function to insert the new chat message into the database
-      fetchData();
+      // Call the insertData function to insert the new chat message into the database
+      insertData();
 
       // Reset the isSubmitted state
       setIsSubmitted(false);

@@ -53,6 +53,10 @@
   text-decoration: underline;
 }
 
+.loggedInAs {
+  margin-top: 1.625rem;
+}
+
 /* Flexbox adjustment for smaller screens */
 @media (max-width: 768px) {
   .footerContainer {
@@ -62,5 +66,9 @@
 
   .footerSection {
     margin-bottom: 2rem;
+  }
+
+  .loggedInAs {
+    margin-top: 2rem;
   }
 }

@@ -9,7 +9,7 @@ import Link from "next/link";
 import "./globals.css";
 import Footer from "@/components/gatherly/Footer/Footer.jsx";
 
-// Supabase server-side URL test (should be visible in Render.com deployment logs in uncommented below)
+// Supabase server-side URL test (should be visible in the Render Cloud (render.com) deployment logs, if uncommented below)
 /* console.log("OUR_PUBLIC_SUPABASE_URL");
 console.log(process.env.NEXT_PUBLIC_SUPABASE_URL); */
 
