@@ -18,13 +18,13 @@ A socially responsible social app that fosters community by helping like-minded 
 
 - A mobile-first, responsive designed web application.
 
-## MVPs
+## MVP
 
-### MVP0 (Pre-Launch Landing Page)
+### Pre-Launch Landing Page
 
 A landing page based on LearnWorlds press release guidelines (so Amazon press release). Possibly with an "are you interested" e-mail subscription form to gauge initial interest.
 
-### MVP1
+### MVP
 
 Just two pages to start with. A profile page and a group chat page. And somewhere (a database) to store the profile and chat data.
 
@@ -54,11 +54,13 @@ Just two pages to start with. A profile page and a group chat page. And somewher
 
   - User authentication and authorisation using a pre-built service like Supabase's Auth service (https://supabase.com/docs/guides/auth)
 
-### MVP2
+## Future development
+
+### Stage 1
 
 - Search functionality for chat groups based on location and interests
 
-### MVP3
+### Stage 2
 
 - Profile pictures
 - Profanity filtering for chat messages using, for example:
@@ -66,15 +68,15 @@ Just two pages to start with. A profile page and a group chat page. And somewher
   - https://www.npmjs.com/package/badwords-list
   - https://www.npmjs.com/package/obscenity
 
-### MVP4
+### MStage 3
 
 - Local meetups
 
-### MVP5
+### Stage 4
 
 - Direct Messages with other users
 
-## Future Features (USPs - Unique Selling Propositions)
+## USPs - Unique Selling Propositions
 
 These are all still in ideation or under discussion.
 
